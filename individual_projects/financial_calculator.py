@@ -1,98 +1,100 @@
 # MR 1st Financial calculator
-# MAIN FUNCTION
-function = True
 
-#price = input(float("What is the price of the Item you want to calculate? "))
-#budget = input(float(""))
-#interest = input(float(""))
-#def main():
-    #print("What function would you like to perform?\n 1. Budget allocator\n 2. Sale Price Calcultor\n 3. Tip calculator\n 4. Compound Interest Calculator")
-    #if function == False:
+#MAIN FUNCTION
 def main():
-
     while True:
         print("Welcome to the MR 1st Financial Calculator.")
-        print("What function would you like to perform?")
-        print(" 1. Savings Time Calculator")
-        print(" 2. Budget allocator")
-        print(" 3. Sale Price Calculator")
-        print(" 4. Tip calculator")
-        print(" 5. Compound Interest Calculator")
-        print(" 6. Exit.")
+        print("Enter the number to select an option")
+        print("1. Savings Time Calculator")
+        print("2. Compound Interest Calculator")
+        print("3. Budget Allocator")
+        print("4. Sale Price Calculator")
+        print("5. Tip Calculator")
+        print("6. Exit")
 
-        choice = input("Enter the number of your choice: ")
-        if choice == '1':
+        choice = input("Choice: ")
+
+        if choice == "1":
             saving()
-        elif choice == '2':
-            budget_allocator()
-        elif choice == '3':
-            sale_price()
-        elif choice == '4':
-            calculate_tip()
-        elif choice == '5':
+        elif choice == "2":
             compound_interest()
-        elif choice == '6':
+        elif choice == "3":
+            budget_allocator()
+        elif choice == "4":
+            sale_price()
+        elif choice == "5":
+            calculate_tip()
+        elif choice == "6":
             print("Thank you, Bye.")
             break
         else:
-            print("Invalid choice. Please enter a number between 1 and 4.")
-# INNER FUNCTION
+            print("Invalid choice.")
+
+
 def saving():
-    float(input("What amount are you saving to? "))
-    float(input("How aften are you contributing? "))
-    print(" 1. Weekly\n 2. Monthly")
-    float(input("How much are you contributing each time? "))
-    print("")
-          
-def calculate_tip():
-    try:
-        bill = float(input("what is the total you want to calculate? "))    
-        total = bill*1.12
-        print(f"Your total with a 12% tip is {total}")
-    except ValueError:
-        print("Please enter a valid Number.")
+    goal = float(input("What amount are you saving to: "))
+    print("How often are you contributing?")
+    print("1. Weekly")
+    print("2. Monthly")
+    frequency = input("Choice: ")
+    contribution = float(input("How much are you contributing each time: "))
+#INNER FUNCTION
+    def calculate_time():
+        if frequency == "1":
+            weeks = goal / contribution
+            return f"It will take {int(weeks)} weeks to save ${goal:.2f}"
+        else:
+            months = goal / contribution
+            return f"It will take {int(months)} months to save ${goal:.2f}"
+
+    print(calculate_time())
+
+#FUNCTIONS
+def compound_interest():
+    starting_amount = float(input("Starting Amount: "))
+    rate = float(input("Interest Rate Percent: ")) / 100
+    years = int(input("Years Spent Compounding: "))
+
+    total = starting_amount * (1 + rate) ** years
+    print(f"At the end of {years} years you will have ${total:.2f}")
+
+
+def budget_allocator():
+    categories = int(input("How many budget categories do you have: "))
+
+    names = [
+        "Rent/Mortgage",
+        "Transportation",
+        "Groceries",
+        "Utilities",
+        "Savings"
+    ]
+
+    income = float(input("What is your monthly income: "))
+    percents = []
+
+    for i in range(categories):
+        percent = float(input(f"What percent is your {names[i]}: "))
+        percents.append(percent)
+
+    for i in range(categories):
+        amount = income * (percents[i] / 100)
+        print(f"{names[i]} is ${amount:.0f}")
 
 
 def sale_price():
-    try:
-        cost = float(input("How much does the item originally cost? "))
-        discount = float(input("What percent is the discount? "))
-        discount_amount = cost * (discount / 100)
-        final_price = cost - discount_amount
-        print(f"The item now costs ${final_price:.2f} (You saved ${discount_amount:.2f}).")
-    except ValueError:
-        print("Please enter a valid number.")
-def budget_allocator():
-    try:
-        categories = int(input("How many budget categories do you have: "))
-        categories_list = ["category_1 = rent/mortgage",
-        "category_2 = transportation",
-        "category_3 = groceries",
-        "category_4 = utlilities",
-        "category_5 = savings"]
-        monthly_income() = float(input("What is your monthly income: "))
-        rent_mortgage_percent() = float(input("What percent i syour Rent/Mortgage?"))
-        transportation_percent() = float(input("What perent is your transportation?"))
-        groceries_percent() = float(input("What percent is your Utilities? "))
-        savings_percent() = float(input("What percent is your savings?" ))
-        if categories_list == '1':
-            rent_mortgage_percent() 
+    cost = float(input("How much does the item originally cost: "))
+    discount = float(input("What percent is the discount: "))
+    final_price = cost - (cost * discount / 100)
+    print(f"The item now costs ${final_price:.2f}")
 
 
-    except ValueError:
-        print("Please enter a valid number.")
-
-
-    pass
-def compound_interest():
-    try:
-        starting_amount = float(input("What is your starting amount: "))
-        interest_rate = starting_amount*1.05
-        years = 10
-        print(f"At the end of {years} years you will have ${starting_amount*interest_rate}.")
-    except ValueError:
-        print("Please enter a valid number.")
-    pass
+def calculate_tip():
+    bill = float(input("How much is the bill: "))
+    percent = float(input("What percent of a tip are you giving: "))
+    tip = bill * (percent / 100)
+    total = bill + tip
+    print(f"The tip amount is ${tip:.2f} and your total is ${total:.2f}")
 
 
 main()
