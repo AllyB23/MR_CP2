@@ -1,6 +1,7 @@
 # MR 2nd Personal Library
 
-def main():
+# I am using a main function for welcomin the user and saying instructions
+def main():  # The main function is acting a sa lobby for the Personal Library  
     # This is welcoming the user and explaining what to do and how the Personal Library works
     print("Welcome to your Personal Library!")
     print("Your Personal Library is able to store your books and have the ability to View, add, remove, or search your library.")
@@ -22,14 +23,14 @@ def main():
     elif choice == "4":
         search()
     elif choice == "5":
-    #    end()
+    #    end() we have to find a way to end or repeat the question again
         pass
     else:
         pass
 
 # These are the functions for the actions for the Personal Library
 def view():
-    books = ["The Hobbit by J.R.R Tolkein", "A Wrinkle in Time by Madeleing L'Engle"]
+    books = ["The Hobbit by J.R.R Tolkein", "A Wrinkle in Time by Madeleing L'Engle", "Breave heart"]
 
     pass
 
@@ -54,6 +55,7 @@ def search():
     print("2. Author")
     search_by = float(input("What would you like to search by? "))
 
+    # This is to perform the action that the user chooses
     if search_by == "1":
         auhtors_name = input("What is the authors name: ").isalpha()
         print(f"")
@@ -63,3 +65,4 @@ def search():
         print("Please enter a valid number. ")
 
 main()
+pass
