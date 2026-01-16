@@ -1,6 +1,6 @@
 # MR 2nd Personal Library
 
-# I am using a main function for welcomin the user and saying instructions
+books = {"The Hobbit by J.R.R Tolkein", "A Wrinkle in Time by Madeleine L'Engle", "Steelheart by Brandon Sanderson", "The Chroincles of Narnia: The horse and His Boy by C.S. Lewis", "The Guve by Lois Lowry", "Howl's Moving Castle by Diana Wynne Jones", "Artemis Fowl by Brandon Mull", "Fablehaven by Brandon Mull", "Inkheart by Cornelia Funke"}# I am using a main function for welcomin the user and saying instructions
 def main():  # The main function is acting a sa lobby for the Personal Library  
     # This is welcoming the user and explaining what to do and how the Personal Library works
     print("Welcome to your Personal Library!")
@@ -12,7 +12,8 @@ def main():  # The main function is acting a sa lobby for the Personal Library
     print("4. Search your Personal Library")
     print("5. Exit your Personal Library")
 
-    choice = float(input("What action would you like to perform? "))
+    choice = input("What action would you like to perform? ")
+
 
     if choice == "1":
         view()
@@ -23,23 +24,24 @@ def main():  # The main function is acting a sa lobby for the Personal Library
     elif choice == "4":
         search()
     elif choice == "5":
-    #    end() we have to find a way to end or repeat the question again
-        pass
+        print("Thank You, goodbye.")
     else:
-        pass
+        print("Invalid Choice, please try again.")
+        main()
 
 # These are the functions for the actions for the Personal Library
 def view():
-    books = ["The Hobbit by J.R.R Tolkein", "A Wrinkle in Time by Madeleing L'Engle", "Breave heart"]
-
-    pass
+    print("\n Your books:")
+    for book in books:
+        print(f" - {book}")
+    main()
 
 def add():
-    title = input("What is the Title of the book you want to add: ")
+    new_book = input("What is the Title of the book you want to add: ")
     author = input("Who is the book by: ")
-    print(f"You have added {title} by {author}.")
-    list = []
-    pass
+    books.add(new_book)
+    print(f" ' {new_book}' has been added!")
+    main()
 
 def remove():
     list = []
@@ -47,8 +49,8 @@ def remove():
     # Display all book items as a numbered list
     bookz = float(input("Enter the number of the item you would like to remove: "))
     print(f"You have removed {bookz} from your Personal Library.")
-    print(f"This is your new list of books {books}.")
-    pass
+    print(f"This is your new list of books {bookz}.")
+    main()
 
 def search():
     print("1. Title")
@@ -65,4 +67,3 @@ def search():
         print("Please enter a valid number. ")
 
 main()
-pass
