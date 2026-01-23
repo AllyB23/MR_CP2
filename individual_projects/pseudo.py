@@ -1,6 +1,7 @@
 # MR 1st Pseudocode for Activity Diagram RPG
 # Display INSTRUCTIONS for using the inventory and proabably ask them if the want to go to their inventory menu
-# Functions of rthe iunstructions and askthem uf they want to go to  the menu or not
+# Make a set for the items in the inventory
+# Functions of the iunstructions and askthem uf they want to go to  the menu or not
 # IF yes call the inventory functions
 # If the user chooses not take them back to the main function?
 # A FUNCTION for the Inventory Menu
