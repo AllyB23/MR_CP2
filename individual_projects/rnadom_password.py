@@ -2,7 +2,6 @@
 import random
 
 def main():
-    while True:
         print("Welcome to the random Password Generator...")
         print("You are able to generate random passwords...")
         print("with the requirements you need!")
@@ -13,10 +12,10 @@ def main():
         if choice == '1':
             requirements()
         elif choice == '2':
-            break
+            return
         else:
             print("Please enter a valid value.")
-        pass
+        
 def requirements():
     """How long does the password need to be: 
     Does the password need lowercase letters:
@@ -30,20 +29,29 @@ def requirements():
 
     while True:
         if lower == 'y':
+            print("")
         elif lower == 'n':
+            print("")
         else:
             break
         if upper == 'y':
+            print("")
         elif upper == 'n':
+            print("")
         else:
             break
         if numbers == 'y':
+             print("")
         elif numbers == 'n':
+            print("")
         else:
             break
         if special_characters == 'y':
+                print("")
         elif special_characters == 'n':
+                print("")
         else:
             break
 
     pass
+main()
