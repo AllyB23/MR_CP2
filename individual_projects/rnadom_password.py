@@ -34,18 +34,21 @@ def requirements():
             print("")
         else:
             break
+    while True:
         if upper == 'y':
             print("")
         elif upper == 'n':
             print("")
         else:
             break
+    while True:
         if numbers == 'y':
              print("")
         elif numbers == 'n':
             print("")
         else:
             break
+    while True:
         if special_characters == 'y':
                 print("")
         elif special_characters == 'n':
