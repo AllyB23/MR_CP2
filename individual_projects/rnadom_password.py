@@ -14,7 +14,7 @@ def main():
             choice = input("What would you like to do? ")        
 
             if choice == '1':
-                requirements()
+                generate_passwords_menu()
             elif choice == '2':
                 break
             else:
@@ -83,8 +83,5 @@ def generate_passwords_menu():
     print("\nPossible Passwords:")
     for _ in range(4):
         print(assemble_password(length, char_pool))
-
-if __name__ == "__main__":
-    main()
 
 main()
