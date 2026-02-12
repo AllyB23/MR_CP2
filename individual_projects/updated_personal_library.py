@@ -1,4 +1,13 @@
 # MR 2nd Personal Library
+import csv
+
+from io import StringIO
+data = "title, creator, year, genre"
+r = csv.reader(StringIO(data))
+for row in r:
+    print(row)
+# Import a csv DictReader	Read CSV data into dictionaries, using the first row as fieldnames.
+
 # Functions for all of the actions, we will use nested loops and functionds
 
 # Function for Showing the list of the book
