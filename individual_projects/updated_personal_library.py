@@ -5,6 +5,7 @@
 # The simple list
 # the detailed list
 
+#Funbction for storing the dictionaries of the items on how they can look up and store the item in thwir personal library
 # Function for adding an item
 # within this function
     #function for deleting an item
