@@ -76,7 +76,7 @@ def add():
     title = input("Title: ")
     creator = input("Creator (author/artist/director): ")
 
-    # Validate year
+    # Validate year of the book in the library
     while True:
         year_input = input("Year: ")
         if year_input.isdigit():
@@ -123,7 +123,7 @@ def remove():
         print("Please enter a valid number.")
 
 
-# Update an item
+# Update an item in the library
 def update():
     if not library:
         print("Library is empty.")
@@ -159,6 +159,7 @@ def update():
 
 # Search function
 def search():
+    # If statements for the choices to search by
     if not library:
         print("Library is empty.")
         return
@@ -177,7 +178,7 @@ def search():
 
     print("\nResults:")
     found = False
-
+#   looking for the item in the library
     for item in library:
         if choice == "1" and query in item["title"].lower():
             print(f"{item['title']} by {item['creator']}")
@@ -197,7 +198,7 @@ def search():
 def main():
     load_library()
     unsaved_changes = False
-
+#   While loop so the program can keep running
     while True:
         print("\nWelcome to your Personal Library!")
         print("Here is a list of options that you can choose from to get started!")
@@ -241,7 +242,7 @@ def main():
                 if save_choice.lower() == "y":
                     save_library()
             print("Thank You, goodbye.")
-            break
+            break # BReaks the loops so the code can stop running
         else:
             print("Invalid Choice, please try again.")
 
