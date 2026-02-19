@@ -1,3 +1,4 @@
+
 # MR 1st Updated Personal Library
 import csv
 import os
@@ -53,5 +54,27 @@ def main():
         #save library
         #reload library from file
         #exit(prompt to save if there are any changes)
+# MR 2nd Personal Library
+import csv
 
+from io import StringIO
+data = "title, creator, year, genre"
+r = csv.reader(StringIO(data))
+for row in r:
+    print(row)
+# Import a csv DictReader	Read CSV data into dictionaries, using the first row as fieldnames.
+
+# Functions for all of the actions, we will use nested loops and functionds
+
+# Function for Showing the list of the book
+# The simple list
+# the detailed list
+
+#Funbction for storing the dictionaries of the items on how they can look up and store the item in thwir personal library
+# Function for adding an item
+# within this function
+    #function for deleting an item
+# function for updating and item within the adding function
+
+# main function that lets you choose what to do and introduces you to your personal library
 
