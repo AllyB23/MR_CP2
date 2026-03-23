@@ -14,4 +14,4 @@ class Animal:
         self.energy = energy
 
     def _str_(self):
-        print(f"Name = {self.name} Species")
+        print(f"Name = {self.name} Species: {self.species} Age = {self.age} ")
