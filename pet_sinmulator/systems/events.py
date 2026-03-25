@@ -10,4 +10,4 @@ def random_event(pet):
     event = random.choice(events)
     pet.happiness += event[1]
 
-    print(f"\n🎉 EVENT: {pet.name} {event[0]}! ({event[1]} happiness)")
+    print(f"\n EVENT: {pet.name} {event[0]}! ({event[1]} happiness)")
