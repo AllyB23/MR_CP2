@@ -3,6 +3,7 @@ from systems.save_load import save_game, load_game
 from models.pet import Pet
 from models.food import foods
 from systems.shop import buy_food
+from systems.competition import compete
 
 def main():
     name = input("Enter pet name: ")
@@ -19,7 +20,8 @@ def main():
         print("5. Save")
         print("6. Load")
         print("7. Shop")
-        print("8. Quit")
+        print("8. Compete")
+        print("9. Quit")
 
         choice = input("Choose: ")
 
@@ -37,14 +39,16 @@ def main():
             loaded = load_game()
             if loaded:
                 pet = loaded
-        elif choice == "4":
+        elif choice == "7":
             print("\n--- SHOP ---")
             for i, food in enumerate(foods):
             print(f"{i+1}. {food.name} (${food.price})")
 
-    pick = int(input("Choose food: ")) - 1
-    buy_food(pet, foods[pick])
-            elif choice == "8":
+            pick = int(input("Choose food: ")) - 1
+            buy_food(pet, foods[pick])
+        elif choice == "8":
+            compete(pet)
+        elif choice == "9":
                 break
         else:
             print("Invalid input!")
