@@ -7,6 +7,7 @@ from systems.competition import compete
 from models.breeding import breed
 
 def main():
+    print("Welcome to the Pet Simulator!")
     name = input("Enter pet name: ")
     species = input("Enter species: ")
 
@@ -44,7 +45,7 @@ def main():
         elif choice == "7":
             print("\n--- SHOP ---")
             for i, food in enumerate(foods):
-            print(f"{i+1}. {food.name} (${food.price})")
+                print(f"{i+1}. {food.name} (${food.price})")
 
             pick = int(input("Choose food: ")) - 1
             buy_food(pet, foods[pick])

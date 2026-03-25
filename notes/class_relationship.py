@@ -2,7 +2,7 @@
 
 # Inheritance "is a"
 # Parent Class
-class Vehical:
+class Vehicle:
     def __init__(self, model, brand):
         self.brand = brand
         self.model = model
@@ -11,7 +11,7 @@ class Vehical:
         print("Move!")
 
 # Child Class
-class Car(vehicle):
+class Car(Vehicle):
     pass
 
 class Boat(Vehicle):
@@ -24,7 +24,7 @@ class Plane(Vehicle):
 
 car = Car("Ford", "Mustang")
 boat = Boat("Ibiza", "Touring 20")
-plane = Plane("Boeing", "747")
+plane = Plane("Bosseing", "747")
 
 car.move()
 boat.move()
