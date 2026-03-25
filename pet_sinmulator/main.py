@@ -1,5 +1,5 @@
 # MR 1st Pet Simulator
-
+from systems.save_load import save_game, load_game
 from models.pet import Pet
 
 def main():
@@ -14,7 +14,9 @@ def main():
         print("2. Play")
         print("3. Sleep")
         print("4. Status")
-        print("5. Quit")
+        print("5. Save")
+        print("6. Load")
+        print("7. Quit")
 
         choice = input("Choose: ")
 
@@ -27,7 +29,13 @@ def main():
         elif choice == "4":
             print(pet)
         elif choice == "5":
-            break
+            save_game(pet)
+        elif choice == "6":
+            loaded = load_game()
+            if loaded:
+                pet = loaded
+            elif choice == "7":
+                break
         else:
             print("Invalid input!")
 
