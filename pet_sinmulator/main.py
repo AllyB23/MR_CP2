@@ -1,6 +1,8 @@
 # MR 1st Pet Simulator
 from systems.save_load import save_game, load_game
 from models.pet import Pet
+from models.food import foods
+from systems.shop import buy_food
 
 def main():
     name = input("Enter pet name: ")
@@ -16,7 +18,8 @@ def main():
         print("4. Status")
         print("5. Save")
         print("6. Load")
-        print("7. Quit")
+        print("7. Shop")
+        print("8. Quit")
 
         choice = input("Choose: ")
 
@@ -34,7 +37,14 @@ def main():
             loaded = load_game()
             if loaded:
                 pet = loaded
-            elif choice == "7":
+        elif choice == "4":
+            print("\n--- SHOP ---")
+            for i, food in enumerate(foods):
+            print(f"{i+1}. {food.name} (${food.price})")
+
+    pick = int(input("Choose food: ")) - 1
+    buy_food(pet, foods[pick])
+            elif choice == "8":
                 break
         else:
             print("Invalid input!")
