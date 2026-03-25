@@ -4,6 +4,7 @@ from models.pet import Pet
 from models.food import foods
 from systems.shop import buy_food
 from systems.competition import compete
+from models.breeding import breed
 
 def main():
     name = input("Enter pet name: ")
@@ -21,7 +22,8 @@ def main():
         print("6. Load")
         print("7. Shop")
         print("8. Compete")
-        print("9. Quit")
+        print("9. Breed")
+        print("10. Quit")
 
         choice = input("Choose: ")
 
@@ -49,6 +51,10 @@ def main():
         elif choice == "8":
             compete(pet)
         elif choice == "9":
+            pet2 = Pet("Buddy2", pet.species)
+            baby = breed(pet, pet2)
+            print(f"New pet born: {baby.name}")
+        elif choice == "10":
                 break
         else:
             print("Invalid input!")
