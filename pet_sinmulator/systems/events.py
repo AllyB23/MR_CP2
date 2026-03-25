@@ -1,3 +1,5 @@
+from systems.events import random_event
+
 import random
 
 def random_event(pet):
@@ -11,3 +13,4 @@ def random_event(pet):
     pet.happiness += event[1]
 
     print(f"\n EVENT: {pet.name} {event[0]}! ({event[1]} happiness)")
+    random_event(pet)
