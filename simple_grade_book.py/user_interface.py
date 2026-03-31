@@ -1,5 +1,7 @@
 # MR 1st Simple Grade Book User Interface
 # import module aliases
+from classes import Student
+from
 
 
 def main():
