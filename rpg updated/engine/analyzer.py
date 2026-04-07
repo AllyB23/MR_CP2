@@ -1,4 +1,11 @@
 import pandas as pd
+import os
+
+def save_to_csv(self, filename="data/characters.csv"):
+    os.makedirs(os.path.dirname(filename), exist_ok=True)
+    
+    self.df.to_csv(filename, index=False)
+    return True
 
 class StatisticalAnalyzer:
     def __init__(self, character_list):
