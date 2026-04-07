@@ -12,14 +12,14 @@ label.config(fg = "blue", background = "orange")
 # stuff about buttons
 root.count = 0
 def add():
-    count += 1
-    tk.Label(root, text = root.count)
+    root.count += 1
+    num["text"] = root.count
 
 
 btn = tk.Button(root, text = "ADD", command = add)
 btn.pack()
-
-
+num = tk.Label(root, text = "0")
+num.pack()
 label.pack()
 #image = tk.PhotoImage(file = "img\\tea.png")
 #tk.Label(root, image = image).pack()
