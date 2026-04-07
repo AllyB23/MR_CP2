@@ -1,0 +1,4 @@
+pandas
+madplotlib
+faker
+numpy
