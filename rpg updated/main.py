@@ -1,7 +1,7 @@
 import sys
 import time
 from models.character import Character
-from engine.generator import RandomGenerator
+from models.generator import RandomGenerator
 from engine.analyzer import StatisticalAnalyzer
 from engine.visualizer import DataVisualization
 
