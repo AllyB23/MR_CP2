@@ -83,5 +83,6 @@ def generate_passwords_menu():
     print("\nPossible Passwords:")
     for _ in range(4):
         print(assemble_password(length, char_pool))
-
+def run():
+    print("Password Generator Running")
 main()
