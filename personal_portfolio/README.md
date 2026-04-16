@@ -4,7 +4,7 @@ This is my Personal Portfolio. I included 4 of my best projects.
 
 ABOUT ME
 
-My name is Aly, I am a freshman in highschool learning Python. My goal is to show users a little bit of my skills in programming.
+My name is Ally, I am a freshman in highschool learning Python. My goal is to show users a little bit of my skills in programming.
 
 PORTFOLIO OVERVIEW
 
