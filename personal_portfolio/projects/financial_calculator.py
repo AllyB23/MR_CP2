@@ -96,5 +96,14 @@ def calculate_tip():
     total = bill + tip
     print(f"The tip amount is ${tip:.2f} and your total is ${total:.2f}")
 
+def run():
+    print("Financial Calculator Running")
 
+    # your existing code goes here
+    # example:
+    amount = float(input("Enter amount: "))
+    rate = float(input("Enter interest rate: "))
+
+    result = amount * (1 + rate)
+    print("Result:", result)
 main()
