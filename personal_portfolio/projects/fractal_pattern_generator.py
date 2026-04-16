@@ -157,7 +157,8 @@ def main():
         else:
             print("Invalid choice. Try again.") # repeats the loop so the user can try again after inputting the wrong thing
             
-
+def run():
+    print("Fractal Generator Running")
 
 # run program again and again
 if __name__ == "__main__":
