@@ -246,7 +246,8 @@ def main():
         else:
             print("Invalid Choice, please try again.")
 
-
+def run():
+    print("Personal Library Running")
 # Runs the program
 if __name__ == "__main__":
     main()
