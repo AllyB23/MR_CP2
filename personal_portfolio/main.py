@@ -5,8 +5,8 @@ from tkinter import messagebox
 # import your projects
 from projects.financial_calculator import main as financial
 from projects.fractal_pattern_generator import main as fractal
-from projects.personal_library import main as library
-from projects.random_password_generator import main as password
+from projects.personal_library_real import main as library
+from projects.random_password import main as password
 
 # main window
 root = tk.Tk()
