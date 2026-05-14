@@ -1,1 +1,70 @@
+# AR Final Extra credit Practice
+
+
+# Declare and set up lists with different data types and initial Values
+
+
+my_list = ["Joe", 4, "minutes", 7]
+# Add data to and read data from lists using indexing
+my_list.insert(1,"Hi")
+my_list.append(5)
+print(my_list)
+
+
+# Write loops to go through every item(for loops, list copmrehensions)
+
+
+for list in my_list:
+    print(list)
+
+
+# Create empty lists that can change size
+
+
+empty_list = []
+
+
+empty_list.insert(1, "Tomato")
+empty_list.append("Hello")
+print(empty_list)
+empty_list.pop()
+print(empty_list)
+empty_list.append("Fun")
+empty_list.remove("Tomato")
+print(empty_list)
+
+
+
+
+#for item in empty_list:
+    #print(f"These are the items that are in my list {empty_list}")
+
+
+# Compare two strings using == or comparisons
+
+
+# find the length of a string
+print(len("This is my class"))
+
+
+# Copy part of a string using slicing
+print("Welcome to the end of the world!"[1:12])
+
+
+# Copy part of a string using + or .join() methods    
+
+
+introductions = "Hello my name is" + " " + "Ally Rosales"
+print(introductions)
+
+
+introduction = ["Hello my name is", "Ally Rosales"]
+sentence = " ".join(introduction)
+print(sentence)
+
+
+# find where a substring appears using .find() or .index()
+
+
+# Insert text using string formattin g or .replace() methods
 
