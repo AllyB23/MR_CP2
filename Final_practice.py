@@ -102,11 +102,11 @@ favorite_color()
 favorite_color("purple")
 
 # Global vs local scope
-my_school = "Westview High"
+my_school = "Utah County Academy of Sciences"
 
 def show_school():
     classroom = "Room 204"
-    print(f"I go to {my_school} in {classroom}")
+    print(f"I go to {my_school} in classroom {classroom}")
 
 show_school()
 
@@ -174,18 +174,3 @@ print(find_biggest_number([1, 2, 3]))
 print(find_biggest_number([100]))
 print(find_biggest_number([-5, -1, -10]))
 
-# STRAND 8: Programming Careers
-
-team_roles = {
-    "Team Leader": "Manages the project and keeps everyone on track",
-    "Analyst": "Figures out what the client needs the software to do",
-    "Senior Developer": "Writes complex code and helps other developers",
-    "Junior Developer": "Writes code and learns from senior developers",
-    "Client": "The person or business who asked for the software"
-}
-
-print("Software Development Team Roles")
-for role, description in team_roles.items():
-    print(f"{role}: {description}")
-
-print("Important traits for programmers: creativity, problem-solving, and teamwork")
