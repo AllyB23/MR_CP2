@@ -64,7 +64,28 @@ print(sentence)
 
 
 # find where a substring appears using .find() or .index()
+text = "Hello, welcome to your first day of school!"
+print(text.find("day"))
+
+text_second = "This is where all your classes are located, on this map"
+
+try:
+    print(text_second.index("located"))
+
+except ValueError:
+    print("Substring not found!")
+
+# Insert text using string formatting or .replace() methods
+
+fruits = "Apples, grapes, and Oranges"
+sentence = f"My favorite fruits are {fruits}"
+
+print(sentence)
+
+"{} has an appointment with {}".format("Crystal", "Gerald")
 
 
-# Insert text using string formattin g or .replace() methods
+complete_sentence = "My friend loves, gaming, sports, and sculpting"
+new_sentence = complete_sentence.replace("loves", "dislikes")
+print(new_sentence)
 
