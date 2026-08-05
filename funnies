@@ -1,4 +1,8 @@
 # Marlin summer projects
 # Nail Design Indexing 
 
+def Class:
+nail categories(self, long, short, medium)
 
+def Class inside Class:
+nail colors(self, red, yellow, blue)
